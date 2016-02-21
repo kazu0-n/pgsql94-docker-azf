@@ -1,0 +1,8 @@
+[Unit]
+Description=Postgres PITR Unit
+
+[Timer]
+OnCalendar=daily
+Persistent=false
+[Install]
+WantedBy=timers.target
