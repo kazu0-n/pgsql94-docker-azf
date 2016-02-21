@@ -1,0 +1,11 @@
+[Unit]
+Description = Setting Azure File Storage Credential
+After=network.target
+Before=remote-fs.target mnt-pgsql.mount
+
+[Service]
+Type = oneshot
+ExecStart=/usr/local/sbin/azfenv.sh
+
+[Install]
+WantedBy = multi-user.target
