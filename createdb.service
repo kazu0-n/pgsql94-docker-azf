@@ -1,0 +1,14 @@
+[Unit]
+Description = Create DB Servece
+After=postgresql-9.4.service syslog.target network.target auditd.service
+
+[Service]
+Type = oneshot
+#User=postgres
+EnvironmentFile=/etc/sysconfig/postgres_env
+ExecStartPre=/usr/local/sbin/postgres_env.sh
+ExecStart=/usr/local/sbin/create_db.sh
+ExecStartPost=/usr/local/sbin/stop_createdb.sh
+
+[Install]
+WantedBy = multi-user.target
