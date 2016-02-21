@@ -1,0 +1,8 @@
+[Unit]
+Description=Postgresql PITR Backup
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/pgsql_pitr.sh
+User=postgres
+Group=postgres
