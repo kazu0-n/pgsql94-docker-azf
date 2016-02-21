@@ -1,0 +1,4 @@
+.include /lib/systemd/system/postgresql-9.4.service
+[Unit]
+Description=PostgreSQL 9.4 database server
+RequiresMountsFor=/mnt/pgsql
