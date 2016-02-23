@@ -21,7 +21,7 @@ It consists of multiple files shell script and systemd unit.
  - postgres_env.sh
 These scripts get information from webserver provides credential data.
 I recommend that I set a limit to access to admit it only from a container host server.
-When you use it, please transfer your-host-name" to your complete URL.
+When you use it, please transfer "your-host-name" to your complete URL.
 
 - azfenv.service
 The systed unit makes credential file "/etc/sysconfig/azfile_env" for "mnt-pgsql.mount" unit with "azfenv.sh".
